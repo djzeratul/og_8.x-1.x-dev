@@ -1,0 +1,4 @@
+og_context.configure_form:
+  route_name: og_context.configure_form
+  title: 'OG context'
+  description: 'OG context detection and selection'

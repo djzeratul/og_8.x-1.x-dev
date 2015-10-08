@@ -1,0 +1,10 @@
+og_ui.settings:
+  type: mapping
+  label: Settings
+  mapping:
+    og_ui_deny_subscribe_without_approval:
+      type: boolean
+    og_ui_admin_people_view:
+      type: string
+    og_ui_7000_add_field:
+      type: boolean

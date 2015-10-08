@@ -1,0 +1,89 @@
+og_ui.group.subscribe:
+  path: '/group/{group_type}/{group_id}/subscribe'
+  defaults:
+    _controller: '\Drupal\og_ui\Plugin\Field\FieldFormatter\OgGroupSubscribe::subscribe'
+    _title: 'Join group'
+    entity_id: 'NULL'
+  requirements:
+    permission: 'authenticated user'
+    
+og_ui.group.unsubscribe:
+  path: '/group/{group_type}/{group_id}/unsubscribe'
+  defaults:
+    _controller: '\Drupal\og_ui\Plugin\Field\FieldFormatter\OgGroupSubscribe::unsubscribe'
+    _title: 'Leave group'
+    entity_id: 'NULL'
+  requirements:
+    _permission: 'authenticated user'
+    
+og_ui.group.administer.people:
+  path: '/group/{group_type}/{group_id}/admin/people'
+  defaults:
+    _controller: '\Drupal\og_ui\Plugin\Field\FieldFormatter\OgGroupSubscribe::listGroup'
+    _title: 'People in group {group_id}'
+    entity_id: 'NULL'
+  requirements:
+    _permission: 'add user'
+    
+og_ui.group.administer.people.add_user:
+  path: '/group/{group_type}/{group_id}/admin/people/add-user'
+  defaults:
+    _form: '\Drupal\og_ui\Plugin\Form\FieldFormatter\OgGroupSubscribe::addUser'
+    _title: 'Add user'
+    entity_id: 'NULL'
+  requirements:
+    _permission: 'manage members'
+    
+og_ui.group.administer.people.edit_membership:
+  path: '/group/{group_type}/{group_id}/admin/people/edit-membership/{og_membership}'
+  defaults:
+    _form: '\Drupal\og_ui\Plugin\Form\FieldFormatter\OgGroupSubscribe::editMembership'
+    _title: 'Edit membership in {og_membership}'
+    entity_id: 'NULL'
+  requirements:
+    _permission: 'manage members'
+    
+og_ui.group.administer.people.delete_membership:
+  path: '/group/{group_type}/{group_id}/admin/people/delete-membership/{og_membership}'
+  defaults:
+    _form: '\Drupal\og_ui\Plugin\Form\FieldFormatter\OgGroupSubscribe::deleteMembership'
+    _title: 'Delete members in {og_membership}'
+    entity_id: 'NULL'
+  requirements:
+    _permission: 'manage members'
+    
+og_ui.group.administer.roles:
+  path: '/group/{group_type}/{group_id}/admin/roles'
+  defaults:
+    _form: '\Drupal\og_ui\Plugin\Form\FieldFormatter\OgGroupSubscribe::editRoles'
+    _title: 'Edit roles for group {group_id}'
+    entity_id: 'NULL'
+  requirements:
+    _permission: 'manage roles'
+    
+og_ui.group.administer.roles:
+  path: 'group/{group_type}/{group_id}/admin/role/{role_id}/edit'
+  defaults:
+    _form: '\Drupal\og_ui\Plugin\Form\FieldFormatter\OgGroupSubscribe::editNodeRole'
+    _title: 'Edit role'
+    entity_id: 'NULL'
+  requirements:
+    _permission: 'manage roles'
+    
+og_ui.group.administer.permissions:
+  path: 'group/{group_type}/{group_id}/admin/permissions'
+  defaults:
+    _form: '\Drupal\og_ui\Plugin\Form\FieldFormatter\OgGroupSubscribe::editPermissions'
+    _title: 'Permissions for group {group_id}'
+    entity_id: 'NULL'
+  requirements:
+    _permission: 'manage permissions'
+    
+og_ui.group.administer.permissions:
+  path: 'group/{group_type}/{group_id}/admin/permission/{role_id}/edit'
+  defaults:
+    _form: '\Drupal\og_ui\Plugin\Form\FieldFormatter\OgGroupSubscribe::editNodePermissions'
+    _title: 'Edit role permissions'
+    entity_id: 'NULL'
+  requirements:
+    _permission: 'manage permissions'

@@ -1,0 +1,3 @@
+og_ui_deny_subscribe_without_approval: true
+og_ui_admin_people_view: 'og_members_admin:default'
+og_ui_7000_add_field: false

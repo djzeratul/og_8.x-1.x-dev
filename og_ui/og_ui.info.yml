@@ -1,0 +1,9 @@
+name: 'Organic groups UI'
+description: 'Organic groups UI.'
+package: 'Organic groups'
+dependencies:
+  - og
+  - views_bulk_operations
+core: 8.x
+version: VERSION
+type: module

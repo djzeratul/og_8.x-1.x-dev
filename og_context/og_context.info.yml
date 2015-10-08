@@ -1,0 +1,7 @@
+name: 'Organic groups context'
+description: 'Get a group from a viewed page.'
+package: 'Organic groups'
+dependencies:
+  - og
+core: 8.x
+type: module

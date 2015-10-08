@@ -1,0 +1,16 @@
+og.og_membership_type.*:
+  type: config_entity
+  label: 'OG membership type'
+  mapping:
+    type:
+      type: string
+      label: 'ID'
+    name:
+      type: string
+      label: 'Name'
+    description:
+      type: string
+      label: 'Description'
+    status:
+      type: boolean
+      label: 'Status'

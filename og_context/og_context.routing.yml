@@ -1,0 +1,7 @@
+og_context.configure_form:
+  path: /admin/config/group/context
+  defaults:
+    _title: 'OG context'
+    _form: \Drupal\og_context\Form\OgContextConfigureForm
+  requirements:
+    _permission: 'administer group'

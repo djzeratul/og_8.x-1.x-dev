@@ -1,0 +1,7 @@
+name: 'Organic groups register'
+description: 'Allow subscribing to groups during the user registration.'
+package: 'Organic groups'
+dependencies:
+  - og
+core: 8.x
+type: module
